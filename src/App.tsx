@@ -34,11 +34,14 @@ export default function Page() {
     .then(response => response.json())
     .then(data => {
       console.log('Response from Azure Function:', data);
-      setYesPressed(true);
+      // Display the "WOOOO" message
     })
     .catch(error => {
       console.error('Error calling Azure Function:', error);
     });
+  
+    // Set yesPressed to true regardless of the fetch result
+    setYesPressed(true);
   };
 
   return (
